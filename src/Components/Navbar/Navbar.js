@@ -10,16 +10,16 @@ import {
 const Navbar = () => {
   return (
     <div className="p-2">
-      <nav className="sm:flex flex place-content-evenly w-full items-center">
-        <div className="space-x-56 items-center justify-center">
-          <Link className="text-4xl font-bold my-auto" to={"/home"}>
+      <nav className="sm:flex place-content-evenly w-full items-center">
+        <div className="flex gap-40 place-content-evenly">
+          <Link className="text-2xl font-bold my-auto sm:text-2xl" to={"/home"}>
             Home Decor
           </Link>
-          <button className="lg:hidden sm:hidden hover:bg-slate-300 p-2 rounded my-auto">
+          <button className="lg:hidden sm:hidden hover:bg-slate-300 p-2 rounded">
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <div className="hidden flex-col sm:block sm:space-x-20">
+        <div className="hidden flex-col sm:block sm:space-x-8">
           <Link className="hover:text-gray-500" to={"/shop"}>
             Shop
           </Link>
