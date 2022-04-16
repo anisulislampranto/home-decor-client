@@ -4,6 +4,7 @@ import image from "../../images/jean-philippe-delberghe-Ry9WBo3qmoc-unsplash-rem
 import "./Header.css";
 import imageTwo from "../../images/sam-moqadam-kvmdsTrGOBM-unsplash-removebg-preview.png";
 import imageThree from "../../images/frame-gf0e7ac98f_1920-removebg-preview.png";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
@@ -23,15 +24,17 @@ const Header = () => {
         <div
           style={{ height: "100%", width: "30%" }}
           className="my-auto place-content-evenly items-center slideset1"
-          //   id="slideset1"
         >
-          <div>
+          <motion.feTurbulence
+            animate={{ baseFrequency: 0.5 }}
+            transition={{ type: "spring", mass: 0.5 }}
+          >
             <img
-              className="animate-pulse h-60 w-96 sm:h-96 sm:w-96"
+              className="animate-pulse h-60 w-96 sm:h-96"
               src={image}
               alt=""
             />
-          </div>
+          </motion.feTurbulence>
           <div>
             <img className="h-60 sm:h-96" src={imageTwo} alt="" />
           </div>
