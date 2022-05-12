@@ -7,22 +7,22 @@ const FilterProduct = () => {
   return (
     <div className="flex place-content-evenly mt-5 ">
       <div class="hidden sm:flex sm:gap-4 my-auto">
-        <a href="" className=" hover:text-gray-500">
+        <a href="/" className=" hover:text-gray-500">
           All
         </a>
-        <a href="" className=" hover:text-gray-500">
+        <a href="/" className=" hover:text-gray-500">
           Home Decor
         </a>
-        <a href="" className=" hover:text-gray-500">
+        <a href="/" className=" hover:text-gray-500">
           Lighting
         </a>
-        <a href="" className=" hover:text-gray-500">
+        <a href="/" className=" hover:text-gray-500">
           Decoration
         </a>
-        <a href="" className=" hover:text-gray-500">
+        <a href="/" className=" hover:text-gray-500">
           Vases
         </a>
-        <a href="" className=" hover:text-gray-500">
+        <a href="/" className=" hover:text-gray-500">
           Basics
         </a>
       </div>
@@ -51,28 +51,28 @@ const FilterProduct = () => {
       </button>
       {toggle && (
         <div
-          class="absolute left-20 flex flex-col gap-3 mt-8 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none p-3"
+          class="absolute left-20 flex flex-col gap-3 mt-8 w-32 z-10 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none p-3"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
           tabindex="-1"
         >
-          <a href="" className=" hover:text-gray-500">
+          <a href="/" className=" hover:text-gray-500">
             All
           </a>
-          <a href="" className=" hover:text-gray-500">
+          <a href="/" className=" hover:text-gray-500">
             Home Decor
           </a>
-          <a href="" className=" hover:text-gray-500">
+          <a href="/" className=" hover:text-gray-500">
             Lighting
           </a>
-          <a href="" className=" hover:text-gray-500">
+          <a href="/" className=" hover:text-gray-500">
             Decoration
           </a>
-          <a href="" className=" hover:text-gray-500">
+          <a href="/" className=" hover:text-gray-500">
             Vases
           </a>
-          <a href="" className=" hover:text-gray-500">
+          <a href="/" className=" hover:text-gray-500">
             Basics
           </a>
         </div>
@@ -81,7 +81,7 @@ const FilterProduct = () => {
         <div>
           <button
             type="button"
-            class="inline-flex justify-center w-full rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none "
+            class="inline-flex justify-center w-full rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none p-2"
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
@@ -106,32 +106,59 @@ const FilterProduct = () => {
         </div>
         {open && (
           <div
-            class="origin-top-right absolute right-0 mt-2 w-72 sm:w-96 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="origin-top-right absolute right-0 mt-2 w-72 sm:w-96 rounded-md shadow-2xl z-10 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
             tabindex="-1"
           >
-            <div class="py-5 px-5 flex gap-16 sm:20" role="none">
+            <div
+              class="py-5 px-5 flex gap-16 sm:20 bg-white relative z-10"
+              role="none"
+            >
               {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
               <div className="flex flex-col gap-3">
                 <h1 className="font-bold text-xs sm:text-sm">SORT BY</h1>
-                <a href="">Default</a>
-                <a href="">Popularity</a>
-                <a href="">Avarage Rating</a>
-                <a href="">Newness</a>
-                <a href="">Price: Low to High</a>
-                <a href="">Price: High to Low</a>
+                <a href="/" className="hover:bg-gray-50:">
+                  Default
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  Popularity
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  Avarage Rating
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  Newness
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  Price: Low to High
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  Price: High to Low
+                </a>
               </div>
 
               <div className="flex flex-col gap-3">
                 <h1 className="font-bold text-xs sm:text-sm">PRICE RANGE</h1>
-                <a href="">All</a>
-                <a href="">$0-$10</a>
-                <a href="">$11-$20</a>
-                <a href="">$21-$30</a>
-                <a href="">$31-$40</a>
-                <a href="">$41-$50</a>
+                <a href="/" className="hover:bg-gray-50">
+                  All
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  $0-$10
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  $11-$20
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  $21-$30
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  $31-$40
+                </a>
+                <a href="/" className="hover:bg-gray-50">
+                  $41-$50
+                </a>
               </div>
             </div>
           </div>

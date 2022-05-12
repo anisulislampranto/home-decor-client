@@ -30,16 +30,25 @@ const Header = () => {
             transition={{ type: "spring", mass: 0.5 }}
           >
             <img
-              className="animate-pulse h-60 w-96 sm:h-96"
+              className="animate-pulse h-60 w-96 flex-shrink-0 sm:h-96 sm:flex-shrink-0"
               src={image}
               alt=""
             />
           </motion.feTurbulence>
           <div>
-            <img className="h-60 sm:h-96" src={imageTwo} alt="" />
+            <img
+              className="h-60 sm:h-96 flex-shrink-0 sm:flex-shrink-0"
+              src={imageTwo}
+              alt=""
+            />
           </div>
           <div>
-            <img className="h-48 sm:h-80" src={imageThree} alt="" srcset="" />
+            <img
+              className="h-48 sm:h-80 flex-shrink-0 sm:flex-shrink-0"
+              src={imageThree}
+              alt=""
+              srcset=""
+            />
           </div>
         </div>
       </div>
