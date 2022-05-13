@@ -1,4 +1,8 @@
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretLeft,
+  faCaretRight,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
@@ -6,12 +10,19 @@ const QuickLookModal = ({ setShowModal, userData }) => {
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useState(0);
 
-  console.log(cart);
-
   return (
     <div>
       <div className="justify-center items-end sm:items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none overflow-hidden">
-        <div className="relative w-auto my-6 mx-auto max-w-3xl">
+        <div className="relative my-6 mx-auto w-4/5 md:max-w-3xl">
+          <div className="flex justify-end">
+            <span
+              className="cursor-pointer p-2 h-7 bg-red-600 text-white -mb-22 z-50 rounded-full"
+              onClick={() => setShowModal(false)}
+            >
+              <FontAwesomeIcon icon={faXmark} className="flex items-center" />
+            </span>
+          </div>
+
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none overflow-hidden">
             {/*body*/}
@@ -32,7 +43,7 @@ const QuickLookModal = ({ setShowModal, userData }) => {
                   I always felt like I could do anything. That’s the main thing
                   people are controlled by!
                 </p>
-                <div className="flex gap-2">
+                <div className="flex gap-2 my-6 h-10 sm:h-11">
                   <div className="flex gap-2 border-2 border-black shadow-md p-2 rounded">
                     <p>Quantity</p>
                     <div className="flex gap-2">
@@ -54,19 +65,13 @@ const QuickLookModal = ({ setShowModal, userData }) => {
                     </div>
                   </div>
                   <button
-                    className="p-2 border-2 border-black shadow-md rounded bg-black text-white font-bold px-4 hover:bg-white hover:text-black"
+                    className="p-2 border-2 border-black shadow-md rounded bg-black text-white font-bold px-4 hover:bg-white hover:text-black text-xs sm:text-lg"
                     onClick={() => setCart(userData.price * quantity)}
                   >
                     Add To Cart
                   </button>
                 </div>
               </div>
-              <span
-                className=" cursor-pointer hover:shadow-md hover:rounded-md p-2 h-7 hover:bg-red-600 hover:text-white"
-                onClick={() => setShowModal(false)}
-              >
-                X
-              </span>
             </div>
             {/*footer*/}
           </div>

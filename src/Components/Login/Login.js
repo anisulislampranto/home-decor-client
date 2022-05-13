@@ -21,6 +21,9 @@ const Login = ({ setRegister, setLogin }) => {
           placeholder="Password"
           className="p-2 rounded-md"
         />
+        <button className="p-2 bg-blue-600 rounded-md text-white font-extrabold text-xl hover:bg-blue-500">
+          Log In
+        </button>
         <h1 className=" flex justify-center text-lg text-white font-bold">
           Or
         </h1>
@@ -41,9 +44,13 @@ const Login = ({ setRegister, setLogin }) => {
           Log In with Facebook
         </div>
         <div>
-          Not a member ?
-          <span className="cursor-pointer" onClick={handleToggle}>
-            Register Now.
+          Not a member ?{" "}
+          <span
+            className="cursor-pointer text-blue-600 font-bold hover:text-white"
+            onClick={handleToggle}
+          >
+            {" "}
+            Create Account
           </span>
         </div>
       </div>

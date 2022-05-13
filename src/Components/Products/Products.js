@@ -8,19 +8,26 @@ const Products = () => {
   const [userData, setUserData] = useState({});
   const [products, setProducts] = useState([]);
 
+  console.log(showModal);
+
   useEffect(() => {
-    fetch("http://localhost:4040/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:4040/products");
+      const json = await response.json();
+
+      setProducts(json);
+    };
+
+    fetchData().catch(console.error);
   }, []);
 
   return (
     <div>
       <FilterProduct />
       <div className="grid grid-cols-1 sm:grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 mx-24  justify-items-center z-0">
-        {products?.map((data) => (
+        {products?.map((product) => (
           <Product
-            data={data}
+            product={product}
             setShowModal={setShowModal}
             setUserData={setUserData}
           />

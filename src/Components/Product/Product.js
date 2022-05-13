@@ -4,12 +4,12 @@ import React from "react";
 
 const Product = (props) => {
   const { setShowModal, setUserData } = props;
-  const { image, name, price } = props.data;
-  console.log(props);
+  const { image, name, price } = props.product;
+  console.log(props.product);
 
   const handleClick = () => {
     setShowModal(true);
-    setUserData(props.data);
+    setUserData(props.product);
   };
 
   return (
