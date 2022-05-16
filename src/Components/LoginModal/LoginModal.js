@@ -14,7 +14,7 @@ const LoginModal = ({ setShowModal }) => {
         <div className="relative my-6 mx-auto sm:w-96 w-11/12">
           <div className="flex justify-end">
             <span
-              className="cursor-pointer p-2 h-7 bg-red-600 text-white -mb-22 z-50 rounded-full"
+              className="cursor-pointer p-2 h-7 bg-red-600 text-white -mb-22 z-50 rounded-full hover:bg-red-500"
               onClick={() => setShowModal(false)}
             >
               <FontAwesomeIcon icon={faXmark} className="flex items-center" />

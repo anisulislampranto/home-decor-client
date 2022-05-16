@@ -1,10 +1,9 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import image from "../../images/jean-philippe-delberghe-Ry9WBo3qmoc-unsplash-removebg-preview.png";
-import "./Header.css";
 import imageTwo from "../../images/sam-moqadam-kvmdsTrGOBM-unsplash-removebg-preview.png";
 import imageThree from "../../images/frame-gf0e7ac98f_1920-removebg-preview.png";
-import { motion } from "framer-motion";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -20,21 +19,17 @@ const Header = () => {
             elit. Quo, ab.
           </p>
         </div>
-
         <div
           style={{ height: "100%", width: "30%" }}
           className="my-auto place-content-evenly items-center slideset1"
         >
-          <motion.feTurbulence
-            animate={{ baseFrequency: 0.5 }}
-            transition={{ type: "spring", mass: 0.5 }}
-          >
+          <div>
             <img
               className="animate-pulse h-60 w-96 flex-shrink-0 sm:h-96 sm:flex-shrink-0"
               src={image}
               alt=""
             />
-          </motion.feTurbulence>
+          </div>
           <div>
             <img
               className="h-60 sm:h-96 flex-shrink-0 sm:flex-shrink-0"

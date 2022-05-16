@@ -10,6 +10,8 @@ const QuickLookModal = ({ setShowModal, userData }) => {
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useState(0);
 
+  console.log(cart);
+
   return (
     <div>
       <div className="justify-center items-end sm:items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none overflow-hidden">

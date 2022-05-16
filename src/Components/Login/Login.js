@@ -1,8 +1,13 @@
 import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import useAuth from "../../hooks/useAuth";
 
 const Login = ({ setRegister, setLogin }) => {
+  const { users, loginWithGoogle } = useAuth();
+
+  console.log(users);
+
   const handleToggle = () => {
     setRegister(true);
     setLogin(false);
@@ -28,7 +33,10 @@ const Login = ({ setRegister, setLogin }) => {
           Or
         </h1>
 
-        <div className="group flex gap-5 justify-center shadow-2xl p-3 rounded-md bg-white hover:shadow-transparent cursor-pointer">
+        <div
+          className="group flex gap-5 justify-center shadow-2xl p-3 rounded-md bg-white hover:shadow-transparent cursor-pointer"
+          onClick={loginWithGoogle}
+        >
           <span className="flex items-center group-hover:text-blue-600">
             <FontAwesomeIcon className="my-auto" icon={faGoogle} />
           </span>
